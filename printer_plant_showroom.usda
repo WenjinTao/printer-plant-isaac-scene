@@ -1,0 +1,213 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    subLayers = [@showroom.usda@, @printer_plant.usd@]
+)
+
+over "World"
+{
+    over "Showroom"
+    {
+        over "Shell"
+        {
+            over "West" (
+                active = false
+            )
+            {
+            }
+
+            over "SouthLeft" (
+                active = false
+            )
+            {
+            }
+
+            over "SouthRight" (
+                active = false
+            )
+            {
+            }
+        }
+    }
+
+    over "ShowroomEnvironment" (
+        active = false
+    )
+    {
+    }
+
+    over "Equipment"
+    {
+        over "Offices"
+        {
+            over "desk_018" (
+                active = false
+            )
+            {
+            }
+
+            over "desk_leg_018" (
+                active = false
+            )
+            {
+            }
+
+            over "monitor_018" (
+                active = false
+            )
+            {
+            }
+
+            over "chair_018" (
+                active = false
+            )
+            {
+            }
+
+            over "desk_021" (
+                active = false
+            )
+            {
+            }
+
+            over "desk_leg_021" (
+                active = false
+            )
+            {
+            }
+
+            over "monitor_021" (
+                active = false
+            )
+            {
+            }
+
+            over "chair_021" (
+                active = false
+            )
+            {
+            }
+
+            over "desk_022" (
+                active = false
+            )
+            {
+            }
+
+            over "desk_leg_022" (
+                active = false
+            )
+            {
+            }
+
+            over "monitor_022" (
+                active = false
+            )
+            {
+            }
+
+            over "chair_022" (
+                active = false
+            )
+            {
+            }
+
+            over "desk_023" (
+                active = false
+            )
+            {
+            }
+
+            over "desk_leg_023" (
+                active = false
+            )
+            {
+            }
+
+            over "monitor_023" (
+                active = false
+            )
+            {
+            }
+
+            over "chair_023" (
+                active = false
+            )
+            {
+            }
+
+            over "desk_024" (
+                active = false
+            )
+            {
+            }
+
+            over "desk_leg_024" (
+                active = false
+            )
+            {
+            }
+
+            over "monitor_024" (
+                active = false
+            )
+            {
+            }
+
+            over "chair_024" (
+                active = false
+            )
+            {
+            }
+
+            over "desk_027" (
+                active = false
+            )
+            {
+            }
+
+            over "desk_leg_027" (
+                active = false
+            )
+            {
+            }
+
+            over "monitor_027" (
+                active = false
+            )
+            {
+            }
+
+            over "chair_027" (
+                active = false
+            )
+            {
+            }
+
+            over "desk_030" (
+                active = false
+            )
+            {
+            }
+
+            over "desk_leg_030" (
+                active = false
+            )
+            {
+            }
+
+            over "monitor_030" (
+                active = false
+            )
+            {
+            }
+
+            over "chair_030" (
+                active = false
+            )
+            {
+            }
+        }
+    }
+}
+

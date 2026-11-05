@@ -1,0 +1,3310 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def "World"
+{
+    over "Equipment"
+    {
+        over "extinguisher_001" (
+            active = false
+        )
+        {
+        }
+
+        over "extinguisher_002" (
+            active = false
+        )
+        {
+        }
+
+        over "extinguisher_003" (
+            active = false
+        )
+        {
+        }
+
+        over "extinguisher_004" (
+            active = false
+        )
+        {
+        }
+
+        over "extinguisher_005" (
+            active = false
+        )
+        {
+        }
+
+        over "extinguisher_006" (
+            active = false
+        )
+        {
+        }
+
+        over "extinguisher_007" (
+            active = false
+        )
+        {
+        }
+
+        over "extinguisher_008" (
+            active = false
+        )
+        {
+        }
+
+        over "extinguisher_009" (
+            active = false
+        )
+        {
+        }
+
+        over "extinguisher_010" (
+            active = false
+        )
+        {
+        }
+    }
+
+    def "Fire"
+    {
+        def "Looks"
+        {
+            def Material "SignExtinguisher"
+            {
+                token outputs:surface.connect = </World/Fire/Looks/SignExtinguisher/Shader.outputs:surface>
+
+                def Shader "Shader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor.connect = </World/Fire/Looks/SignExtinguisher/tex.outputs:rgb>
+                    float inputs:roughness = 0.5
+                    token outputs:surface
+                }
+
+                def Shader "st"
+                {
+                    uniform token info:id = "UsdPrimvarReader_float2"
+                    token inputs:varname = "st"
+                    float2 outputs:result
+                }
+
+                def Shader "tex"
+                {
+                    uniform token info:id = "UsdUVTexture"
+                    asset inputs:file = @./textures/sign_extinguisher.png@
+                    token inputs:sourceColorSpace = "sRGB"
+                    float2 inputs:st.connect = </World/Fire/Looks/SignExtinguisher/st.outputs:result>
+                    color3f outputs:rgb
+                }
+            }
+
+            def Material "SignExit"
+            {
+                token outputs:surface.connect = </World/Fire/Looks/SignExit/Shader.outputs:surface>
+
+                def Shader "Shader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor.connect = </World/Fire/Looks/SignExit/tex.outputs:rgb>
+                    color3f inputs:emissiveColor.connect = </World/Fire/Looks/SignExit/tex.outputs:rgb>
+                    float inputs:roughness = 0.5
+                    token outputs:surface
+                }
+
+                def Shader "st"
+                {
+                    uniform token info:id = "UsdPrimvarReader_float2"
+                    token inputs:varname = "st"
+                    float2 outputs:result
+                }
+
+                def Shader "tex"
+                {
+                    uniform token info:id = "UsdUVTexture"
+                    asset inputs:file = @./textures/sign_exit.png@
+                    token inputs:sourceColorSpace = "sRGB"
+                    float2 inputs:st.connect = </World/Fire/Looks/SignExit/st.outputs:result>
+                    color3f outputs:rgb
+                }
+            }
+
+            def Material "PostYellow"
+            {
+                token outputs:surface.connect = </World/Fire/Looks/PostYellow/Shader.outputs:surface>
+
+                def Shader "Shader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (0.85, 0.62, 0.05)
+                    float inputs:roughness = 0.45
+                    token outputs:surface
+                }
+            }
+
+            def Material "AlarmRed"
+            {
+                token outputs:surface.connect = </World/Fire/Looks/AlarmRed/Shader.outputs:surface>
+
+                def Shader "Shader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (0.7, 0.04, 0.04)
+                    float inputs:roughness = 0.35
+                    token outputs:surface
+                }
+            }
+
+            def Material "RouteGreen"
+            {
+                token outputs:surface.connect = </World/Fire/Looks/RouteGreen/Shader.outputs:surface>
+
+                def Shader "Shader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (0.05, 0.55, 0.25)
+                    float inputs:roughness = 0.6
+                    token outputs:surface
+                }
+            }
+
+            def Material "DoorSteel"
+            {
+                token outputs:surface.connect = </World/Fire/Looks/DoorSteel/Shader.outputs:surface>
+
+                def Shader "Shader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (0.32, 0.35, 0.38)
+                    float inputs:roughness = 0.5
+                    token outputs:surface
+                }
+            }
+
+            def Material "PushBar"
+            {
+                token outputs:surface.connect = </World/Fire/Looks/PushBar/Shader.outputs:surface>
+
+                def Shader "Shader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (0.75, 0.75, 0.72)
+                    float inputs:roughness = 0.3
+                    token outputs:surface
+                }
+            }
+        }
+
+        def "Extinguishers"
+        {
+            def Xform "EXT_01"
+            {
+                float xformOp:rotateZ = -90
+                double3 xformOp:translate = (1, 83.789, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_02"
+            {
+                float xformOp:rotateZ = -90
+                double3 xformOp:translate = (29, 83.789, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_03"
+            {
+                float xformOp:rotateZ = -90
+                double3 xformOp:translate = (65, 83.789, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_04"
+            {
+                float xformOp:rotateZ = -90
+                double3 xformOp:translate = (87, 83.789, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_05"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (111.789, 83, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_06"
+            {
+                float xformOp:rotateZ = 90
+                double3 xformOp:translate = (98, 72.266, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_07"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (42.266000000000005, 72, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_08"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (69.734, 72, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_09"
+            {
+                float xformOp:rotateZ = -90
+                double3 xformOp:translate = (14, 71.734, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_10"
+            {
+                float xformOp:rotateZ = -90
+                double3 xformOp:translate = (28, 71.734, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_11"
+            {
+                float xformOp:rotateZ = -90
+                double3 xformOp:translate = (84, 71.734, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_12"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (0.211, 63, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_13"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (0.211, 61, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_14"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (2.9659999999999997, 61, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_15"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (9.166, 61, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_16"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (42.266000000000005, 60, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_17"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (56.266000000000005, 60, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_18"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (97.734, 60, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_19"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (26.634000000000004, 57, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_20"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (111.789, 57, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_21"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (9.166, 55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_22"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (29.365999999999996, 55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_23"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (15.366000000000001, 51, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_24"
+            {
+                float xformOp:rotateZ = 90
+                double3 xformOp:translate = (84, 48.266000000000005, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_25"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (42.266000000000005, 48, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_26"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (69.734, 48, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_27"
+            {
+                float xformOp:rotateZ = -90
+                double3 xformOp:translate = (98, 47.733999999999995, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_28"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (111.789, 45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_29"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (90.00000000000001, 38, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_30"
+            {
+                float xformOp:rotateZ = 90
+                double3 xformOp:translate = (56, 36.266000000000005, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_31"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (42.266000000000005, 36, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_32"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (69.734, 36, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_33"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (70.266, 36, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_34"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (111.789, 33, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_35"
+            {
+                float xformOp:rotateZ = 90
+                double3 xformOp:translate = (93, 28.066, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_36"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (111.789, 27, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_37"
+            {
+                float xformOp:rotateZ = 90
+                double3 xformOp:translate = (70, 24.266, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_38"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (42.266000000000005, 24, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_39"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (55.733999999999995, 24, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_40"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (56.266000000000005, 24, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_41"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (84.266, 24, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_42"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (6.434, 19, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_43"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (19.634000000000004, 19, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_44"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (0.211, 17, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_45"
+            {
+                float xformOp:rotateZ = 90
+                double3 xformOp:translate = (56, 12.265999999999995, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_46"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (27.734, 12, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_47"
+            {
+                float xformOp:rotateZ = 0
+                double3 xformOp:translate = (84.266, 12, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_48"
+            {
+                float xformOp:rotateZ = -90
+                double3 xformOp:translate = (70, 11.734000000000005, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_49"
+            {
+                float xformOp:rotateZ = 180
+                double3 xformOp:translate = (111.789, 5, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_50"
+            {
+                float xformOp:rotateZ = 90
+                double3 xformOp:translate = (11, 0.21100000000000568, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_51"
+            {
+                float xformOp:rotateZ = 90
+                double3 xformOp:translate = (23, 0.21100000000000568, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_52"
+            {
+                float xformOp:rotateZ = 90
+                double3 xformOp:translate = (41, 0.21100000000000568, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_53"
+            {
+                float xformOp:rotateZ = 90
+                double3 xformOp:translate = (61, 0.21100000000000568, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_54"
+            {
+                float xformOp:rotateZ = 90
+                double3 xformOp:translate = (77, 0.21100000000000568, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Xform "EXT_55"
+            {
+                float xformOp:rotateZ = 90
+                double3 xformOp:translate = (91, 0.21100000000000568, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ"]
+
+                def Xform "unit" (
+                    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+                )
+                {
+                    float3 xformOp:scale = (0.014, 0.014, 0.014)
+                    double3 xformOp:translate = (0, 0, 0.86)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+        }
+
+        def "Signs"
+        {
+            def Mesh "EXT_01" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(0.88, 83.851, 1.7), (1.12, 83.851, 1.7), (1.12, 83.851, 2), (0.88, 83.851, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_02" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(28.88, 83.851, 1.7), (29.12, 83.851, 1.7), (29.12, 83.851, 2), (28.88, 83.851, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_03" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(64.88, 83.851, 1.7), (65.12, 83.851, 1.7), (65.12, 83.851, 2), (64.88, 83.851, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_04" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(86.88, 83.851, 1.7), (87.12, 83.851, 1.7), (87.12, 83.851, 2), (86.88, 83.851, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_05" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(111.851, 83.12, 1.7), (111.851, 82.88, 1.7), (111.851, 82.88, 2), (111.851, 83.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_06" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(98.12, 72.204, 1.7), (97.88, 72.204, 1.7), (97.88, 72.204, 2), (98.12, 72.204, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_07" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(42.204, 71.88, 1.7), (42.204, 72.12, 1.7), (42.204, 72.12, 2), (42.204, 71.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_08" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(69.796, 72.12, 1.7), (69.796, 71.88, 1.7), (69.796, 71.88, 2), (69.796, 72.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_09" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(13.88, 71.796, 1.7), (14.12, 71.796, 1.7), (14.12, 71.796, 2), (13.88, 71.796, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_10" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(27.88, 71.796, 1.7), (28.12, 71.796, 1.7), (28.12, 71.796, 2), (27.88, 71.796, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_11" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(83.88, 71.796, 1.7), (84.12, 71.796, 1.7), (84.12, 71.796, 2), (83.88, 71.796, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_12" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(0.149, 62.88, 1.7), (0.149, 63.12, 1.7), (0.149, 63.12, 2), (0.149, 62.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_13" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(0.149, 60.88, 1.7), (0.149, 61.12, 1.7), (0.149, 61.12, 2), (0.149, 60.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_14" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(2.904, 60.88, 1.7), (2.904, 61.12, 1.7), (2.904, 61.12, 2), (2.904, 60.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_15" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(9.104, 60.88, 1.7), (9.104, 61.12, 1.7), (9.104, 61.12, 2), (9.104, 60.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_16" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(42.204, 59.88, 1.7), (42.204, 60.12, 1.7), (42.204, 60.12, 2), (42.204, 59.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_17" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(56.204, 59.88, 1.7), (56.204, 60.12, 1.7), (56.204, 60.12, 2), (56.204, 59.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_18" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(97.796, 60.12, 1.7), (97.796, 59.88, 1.7), (97.796, 59.88, 2), (97.796, 60.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_19" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(26.696, 57.12, 1.7), (26.696, 56.88, 1.7), (26.696, 56.88, 2), (26.696, 57.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_20" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(111.851, 57.12, 1.7), (111.851, 56.88, 1.7), (111.851, 56.88, 2), (111.851, 57.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_21" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(9.104, 54.88, 1.7), (9.104, 55.12, 1.7), (9.104, 55.12, 2), (9.104, 54.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_22" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(29.304, 54.88, 1.7), (29.304, 55.12, 1.7), (29.304, 55.12, 2), (29.304, 54.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_23" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(15.304, 50.88, 1.7), (15.304, 51.12, 1.7), (15.304, 51.12, 2), (15.304, 50.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_24" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(84.12, 48.204, 1.7), (83.88, 48.204, 1.7), (83.88, 48.204, 2), (84.12, 48.204, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_25" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(42.204, 47.88, 1.7), (42.204, 48.12, 1.7), (42.204, 48.12, 2), (42.204, 47.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_26" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(69.796, 48.12, 1.7), (69.796, 47.88, 1.7), (69.796, 47.88, 2), (69.796, 48.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_27" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(97.88, 47.796, 1.7), (98.12, 47.796, 1.7), (98.12, 47.796, 2), (97.88, 47.796, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_28" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(111.851, 45.12, 1.7), (111.851, 44.88, 1.7), (111.851, 44.88, 2), (111.851, 45.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_29" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(89.938, 37.88, 1.7), (89.938, 38.12, 1.7), (89.938, 38.12, 2), (89.938, 37.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_30" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(56.12, 36.204, 1.7), (55.88, 36.204, 1.7), (55.88, 36.204, 2), (56.12, 36.204, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_31" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(42.204, 35.88, 1.7), (42.204, 36.12, 1.7), (42.204, 36.12, 2), (42.204, 35.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_32" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(69.796, 36.12, 1.7), (69.796, 35.88, 1.7), (69.796, 35.88, 2), (69.796, 36.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_33" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(70.204, 35.88, 1.7), (70.204, 36.12, 1.7), (70.204, 36.12, 2), (70.204, 35.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_34" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(111.851, 33.12, 1.7), (111.851, 32.88, 1.7), (111.851, 32.88, 2), (111.851, 33.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_35" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(93.12, 28.004, 1.7), (92.88, 28.004, 1.7), (92.88, 28.004, 2), (93.12, 28.004, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_36" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(111.851, 27.12, 1.7), (111.851, 26.88, 1.7), (111.851, 26.88, 2), (111.851, 27.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_37" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(70.12, 24.204, 1.7), (69.88, 24.204, 1.7), (69.88, 24.204, 2), (70.12, 24.204, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_38" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(42.204, 23.88, 1.7), (42.204, 24.12, 1.7), (42.204, 24.12, 2), (42.204, 23.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_39" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(55.796, 24.12, 1.7), (55.796, 23.88, 1.7), (55.796, 23.88, 2), (55.796, 24.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_40" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(56.204, 23.88, 1.7), (56.204, 24.12, 1.7), (56.204, 24.12, 2), (56.204, 23.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_41" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(84.204, 23.88, 1.7), (84.204, 24.12, 1.7), (84.204, 24.12, 2), (84.204, 23.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_42" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(6.496, 19.12, 1.7), (6.496, 18.88, 1.7), (6.496, 18.88, 2), (6.496, 19.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_43" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(19.696, 19.12, 1.7), (19.696, 18.88, 1.7), (19.696, 18.88, 2), (19.696, 19.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_44" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(0.149, 16.88, 1.7), (0.149, 17.12, 1.7), (0.149, 17.12, 2), (0.149, 16.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_45" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(56.12, 12.204, 1.7), (55.88, 12.204, 1.7), (55.88, 12.204, 2), (56.12, 12.204, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_46" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(27.796, 12.12, 1.7), (27.796, 11.88, 1.7), (27.796, 11.88, 2), (27.796, 12.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_47" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(84.204, 11.88, 1.7), (84.204, 12.12, 1.7), (84.204, 12.12, 2), (84.204, 11.88, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_48" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0), (6.123234e-17, -1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(69.88, 11.796, 1.7), (70.12, 11.796, 1.7), (70.12, 11.796, 2), (69.88, 11.796, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_49" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0), (-1, 1.2246469e-16, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(111.851, 5.12, 1.7), (111.851, 4.88, 1.7), (111.851, 4.88, 2), (111.851, 5.12, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_50" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(11.12, 0.149, 1.7), (10.88, 0.149, 1.7), (10.88, 0.149, 2), (11.12, 0.149, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_51" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(23.12, 0.149, 1.7), (22.88, 0.149, 1.7), (22.88, 0.149, 2), (23.12, 0.149, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_52" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(41.12, 0.149, 1.7), (40.88, 0.149, 1.7), (40.88, 0.149, 2), (41.12, 0.149, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_53" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(61.12, 0.149, 1.7), (60.88, 0.149, 1.7), (60.88, 0.149, 2), (61.12, 0.149, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_54" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(77.12, 0.149, 1.7), (76.88, 0.149, 1.7), (76.88, 0.149, 2), (77.12, 0.149, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "EXT_55" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExtinguisher>
+                normal3f[] normals = [(6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0), (6.123234e-17, 1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(91.12, 0.149, 1.7), (90.88, 0.149, 1.7), (90.88, 0.149, 2), (91.12, 0.149, 2)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+        }
+
+        def "Posts"
+        {
+            def Cube "EXT_29_post" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/PostYellow>
+                double size = 1
+                float xformOp:rotateZ = 0
+                float3 xformOp:scale = (0.08, 0.08, 2.3)
+                double3 xformOp:translate = (89.894, 38, 1.15)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "EXT_29_plate" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/PostYellow>
+                double size = 1
+                float xformOp:rotateZ = 0
+                float3 xformOp:scale = (0.26, 0.26, 0.012)
+                double3 xformOp:translate = (89.894, 38, 0.006)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+        }
+
+        def "ExitSigns"
+        {
+            def Mesh "FE1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExit>
+                normal3f[] normals = [(0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(23.2, 83.836, 2.4375), (23.8, 83.836, 2.4375), (23.8, 83.836, 2.6625), (23.2, 83.836, 2.6625)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "FE2" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExit>
+                normal3f[] normals = [(0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(55.2, 83.836, 2.4375), (55.8, 83.836, 2.4375), (55.8, 83.836, 2.6625), (55.2, 83.836, 2.6625)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "FE3" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExit>
+                normal3f[] normals = [(0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(97.2, 83.836, 2.4375), (97.8, 83.836, 2.4375), (97.8, 83.836, 2.6625), (97.2, 83.836, 2.6625)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "FE4" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExit>
+                normal3f[] normals = [(-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(111.836, 46.8, 2.4375), (111.836, 46.2, 2.4375), (111.836, 46.2, 2.6625), (111.836, 46.8, 2.6625)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "FE5" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExit>
+                normal3f[] normals = [(-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(111.836, 23.8, 2.4375), (111.836, 23.2, 2.4375), (111.836, 23.2, 2.6625), (111.836, 23.8, 2.6625)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "ME" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExit>
+                normal3f[] normals = [(0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(65.7, 0.164, 2.4375), (65.1, 0.164, 2.4375), (65.1, 0.164, 2.6625), (65.7, 0.164, 2.6625)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+
+            def Mesh "FE6" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform bool doubleSided = 0
+                int[] faceVertexCounts = [4]
+                int[] faceVertexIndices = [0, 1, 2, 3]
+                rel material:binding = </World/Fire/Looks/SignExit>
+                normal3f[] normals = [(1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                    interpolation = "vertex"
+                )
+                point3f[] points = [(0.164, 15.7, 2.4375), (0.164, 16.3, 2.4375), (0.164, 16.3, 2.6625), (0.164, 15.7, 2.6625)]
+                texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                    interpolation = "vertex"
+                )
+            }
+        }
+
+        def "ExitDoors"
+        {
+            def Cube "FE1_leaf" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/DoorSteel>
+                double size = 1
+                float xformOp:rotateZ = -90
+                float3 xformOp:scale = (0.05, 1.2, 2.1)
+                double3 xformOp:translate = (23.5, 83.815, 1.05)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "FE1_bar" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/PushBar>
+                double size = 1
+                float xformOp:rotateZ = -90
+                float3 xformOp:scale = (0.06, 0.95, 0.06)
+                double3 xformOp:translate = (23.5, 83.75, 1)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "FE2_leaf" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/DoorSteel>
+                double size = 1
+                float xformOp:rotateZ = -90
+                float3 xformOp:scale = (0.05, 1.2, 2.1)
+                double3 xformOp:translate = (55.5, 83.815, 1.05)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "FE2_bar" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/PushBar>
+                double size = 1
+                float xformOp:rotateZ = -90
+                float3 xformOp:scale = (0.06, 0.95, 0.06)
+                double3 xformOp:translate = (55.5, 83.75, 1)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "FE3_leaf" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/DoorSteel>
+                double size = 1
+                float xformOp:rotateZ = -90
+                float3 xformOp:scale = (0.05, 1.2, 2.1)
+                double3 xformOp:translate = (97.5, 83.815, 1.05)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "FE3_bar" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/PushBar>
+                double size = 1
+                float xformOp:rotateZ = -90
+                float3 xformOp:scale = (0.06, 0.95, 0.06)
+                double3 xformOp:translate = (97.5, 83.75, 1)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "FE4_leaf" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/DoorSteel>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.05, 1.2, 2.1)
+                double3 xformOp:translate = (111.815, 46.5, 1.05)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "FE4_bar" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/PushBar>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.06, 0.95, 0.06)
+                double3 xformOp:translate = (111.75, 46.5, 1)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "FE5_leaf" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/DoorSteel>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.05, 1.2, 2.1)
+                double3 xformOp:translate = (111.815, 23.5, 1.05)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "FE5_bar" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/PushBar>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.06, 0.95, 0.06)
+                double3 xformOp:translate = (111.75, 23.5, 1)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "FE6_leaf" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/DoorSteel>
+                double size = 1
+                float xformOp:rotateZ = 0
+                float3 xformOp:scale = (0.05, 1.2, 2.1)
+                double3 xformOp:translate = (0.185, 16, 1.05)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "FE6_bar" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/PushBar>
+                double size = 1
+                float xformOp:rotateZ = 0
+                float3 xformOp:scale = (0.06, 0.95, 0.06)
+                double3 xformOp:translate = (0.25, 16, 1)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+        }
+
+        def "Alarm"
+        {
+            def Cube "MCP_FE1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/AlarmRed>
+                double size = 1
+                float xformOp:rotateZ = -90
+                float3 xformOp:scale = (0.09, 0.09, 0.12)
+                double3 xformOp:translate = (24.6, 83.8, 1.25)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "MCP_FE2" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/AlarmRed>
+                double size = 1
+                float xformOp:rotateZ = -90
+                float3 xformOp:scale = (0.09, 0.09, 0.12)
+                double3 xformOp:translate = (56.6, 83.8, 1.25)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "MCP_FE3" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/AlarmRed>
+                double size = 1
+                float xformOp:rotateZ = -90
+                float3 xformOp:scale = (0.09, 0.09, 0.12)
+                double3 xformOp:translate = (98.6, 83.8, 1.25)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "MCP_FE4" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/AlarmRed>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.09, 0.09, 0.12)
+                double3 xformOp:translate = (111.8, 45.4, 1.25)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "MCP_FE5" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/AlarmRed>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.09, 0.09, 0.12)
+                double3 xformOp:translate = (111.8, 22.4, 1.25)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "MCP_ME" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/AlarmRed>
+                double size = 1
+                float xformOp:rotateZ = 90
+                float3 xformOp:scale = (0.09, 0.09, 0.12)
+                double3 xformOp:translate = (64.30000000000001, 0.2, 1.25)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "MCP_FE6" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/AlarmRed>
+                double size = 1
+                float xformOp:rotateZ = 0
+                float3 xformOp:scale = (0.09, 0.09, 0.12)
+                double3 xformOp:translate = (0.2, 17.1, 1.25)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+        }
+
+        def "Routes"
+        {
+            def Cube "strip_0000" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -45
+                float3 xformOp:scale = (0.6656854, 0.1, 0.006)
+                double3 xformOp:translate = (7.3, 75.7, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0001" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -90
+                float3 xformOp:scale = (7.9, 0.1, 0.006)
+                double3 xformOp:translate = (7.5, 71.6, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0002" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -1.7899106
+                float3 xformOp:scale = (6.503124, 0.1, 0.006)
+                double3 xformOp:translate = (10.7, 67.6, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0003" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 45
+                float3 xformOp:scale = (3.7769554, 0.1, 0.006)
+                double3 xformOp:translate = (15.2, 68.8, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0004" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 90
+                float3 xformOp:scale = (5.1, 0.1, 0.006)
+                double3 xformOp:translate = (16.5, 72.6, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0005" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 45
+                float3 xformOp:scale = (2.3627417, 0.1, 0.006)
+                double3 xformOp:translate = (17.3, 75.9, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0006" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 90
+                float3 xformOp:scale = (1.1, 0.1, 0.006)
+                double3 xformOp:translate = (18.1, 77.2, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0007" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 47.04541
+                float3 xformOp:scale = (8.024645, 0.1, 0.006)
+                double3 xformOp:translate = (20.8, 80.6, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0008" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 123.69007
+                float3 xformOp:scale = (0.82111025, 0.1, 0.006)
+                double3 xformOp:translate = (24.9, 76.2, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0009" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 90
+                float3 xformOp:scale = (3.7, 0.1, 0.006)
+                double3 xformOp:translate = (24.7, 78.3, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0010" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (1.7970563, 0.1, 0.006)
+                double3 xformOp:translate = (24.1, 80.69999999999999, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0011" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 90
+                float3 xformOp:scale = (2.3, 0.1, 0.006)
+                double3 xformOp:translate = (23.5, 82.4, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0012" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -135
+                float3 xformOp:scale = (3.4941125, 0.1, 0.006)
+                double3 xformOp:translate = (16.9, 39.7, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0013" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -90
+                float3 xformOp:scale = (20.9, 0.1, 0.006)
+                double3 xformOp:translate = (15.7, 28.1, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0014" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -177.08916
+                float3 xformOp:scale = (11.915244, 0.1, 0.006)
+                double3 xformOp:translate = (9.799999999999999, 17.4, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0015" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -135
+                float3 xformOp:scale = (1.7970563, 0.1, 0.006)
+                double3 xformOp:translate = (3.3, 16.5, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0016" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (2.3, 0.1, 0.006)
+                double3 xformOp:translate = (1.6, 15.900000000000006, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0017" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (2.9284272, 0.1, 0.006)
+                double3 xformOp:translate = (11.1, 8.5, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0018" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (1.5, 0.1, 0.006)
+                double3 xformOp:translate = (9.399999999999999, 9.5, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0019" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (1.5142136, 0.1, 0.006)
+                double3 xformOp:translate = (8.2, 10, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0020" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (1.5, 0.1, 0.006)
+                double3 xformOp:translate = (7, 10.5, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0021" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 137.04541
+                float3 xformOp:scale = (8.024645, 0.1, 0.006)
+                double3 xformOp:translate = (3.4, 13.200000000000003, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0022" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (1.5142136, 0.1, 0.006)
+                double3 xformOp:translate = (29.6, 7.400000000000006, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0023" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (1.3, 0.1, 0.006)
+                double3 xformOp:translate = (28.5, 7.900000000000006, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0024" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 131.63354
+                float3 xformOp:scale = (7.324957, 0.1, 0.006)
+                double3 xformOp:translate = (25.5, 10.600000000000001, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0025" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (15.7, 0.1, 0.006)
+                double3 xformOp:translate = (15.3, 13.299999999999997, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0026" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (2.079899, 0.1, 0.006)
+                double3 xformOp:translate = (6.8, 14, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0027" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (2.3, 0.1, 0.006)
+                double3 xformOp:translate = (5, 14.700000000000003, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0028" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (1.7970563, 0.1, 0.006)
+                double3 xformOp:translate = (3.3, 15.300000000000004, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0029" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (2.3, 0.1, 0.006)
+                double3 xformOp:translate = (1.6, 15.900000000000006, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0030" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 40.23636
+                float3 xformOp:scale = (3.5058773, 0.1, 0.006)
+                double3 xformOp:translate = (57.8, 73, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0031" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 90
+                float3 xformOp:scale = (0.9, 0.1, 0.006)
+                double3 xformOp:translate = (59.1, 74.5, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0032" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 95.710594
+                float3 xformOp:scale = (2.109975, 0.1, 0.006)
+                double3 xformOp:translate = (59, 75.9, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0033" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (3.2112699, 0.1, 0.006)
+                double3 xformOp:translate = (57.8, 78, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0034" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 90
+                float3 xformOp:scale = (1.1, 0.1, 0.006)
+                double3 xformOp:translate = (56.7, 79.6, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0035" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (1.7970563, 0.1, 0.006)
+                double3 xformOp:translate = (56.1, 80.69999999999999, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0036" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 90
+                float3 xformOp:scale = (2.3, 0.1, 0.006)
+                double3 xformOp:translate = (55.5, 82.4, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0037" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -0.41368076
+                float3 xformOp:scale = (55.501446, 0.1, 0.006)
+                double3 xformOp:translate = (83.8, 46.7, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0038" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 0
+                float3 xformOp:scale = (6.1, 0.1, 0.006)
+                double3 xformOp:translate = (97.1, 69.5, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0039" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 45
+                float3 xformOp:scale = (0.6656854, 0.1, 0.006)
+                double3 xformOp:translate = (100.3, 69.7, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0040" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 90
+                float3 xformOp:scale = (10.3, 0.1, 0.006)
+                double3 xformOp:translate = (100.5, 75, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0041" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 131.42366
+                float3 xformOp:scale = (4.6343136, 0.1, 0.006)
+                double3 xformOp:translate = (99, 81.8, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0042" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -1.3169124
+                float3 xformOp:scale = (17.504597, 0.1, 0.006)
+                double3 xformOp:translate = (102.8, 46.7, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0043" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -45
+                float3 xformOp:scale = (0.6656854, 0.1, 0.006)
+                double3 xformOp:translate = (94.3, 24.7, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0044" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -0.8550974
+                float3 xformOp:scale = (13.5014925, 0.1, 0.006)
+                double3 xformOp:translate = (101.2, 24.4, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0045" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -45
+                float3 xformOp:scale = (1.2313708, 0.1, 0.006)
+                double3 xformOp:translate = (108.30000000000001, 23.9, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0046" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 0
+                float3 xformOp:scale = (2.9, 0.1, 0.006)
+                double3 xformOp:translate = (110.1, 23.5, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0047" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 45
+                float3 xformOp:scale = (16.504877, 0.1, 0.006)
+                double3 xformOp:translate = (99.9, 11.700000000000003, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0048" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 0
+                float3 xformOp:scale = (1.3, 0.1, 0.006)
+                double3 xformOp:translate = (106.30000000000001, 17.5, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0049" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 43.66778
+                float3 xformOp:scale = (6.1827626, 0.1, 0.006)
+                double3 xformOp:translate = (109.1, 19.6, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0050" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 83.659805
+                float3 xformOp:scale = (1.911077, 0.1, 0.006)
+                double3 xformOp:translate = (111.4, 22.6, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0051" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (0.9485281, 0.1, 0.006)
+                double3 xformOp:translate = (45.8, 26.2, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0052" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 90
+                float3 xformOp:scale = (7.9, 0.1, 0.006)
+                double3 xformOp:translate = (45.5, 30.4, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0053" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (8.585281, 0.1, 0.006)
+                double3 xformOp:translate = (42.5, 37.3, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0054" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (1.1, 0.1, 0.006)
+                double3 xformOp:translate = (39, 40.3, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0055" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (4.059798, 0.1, 0.006)
+                double3 xformOp:translate = (37.1, 41.7, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0056" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 90
+                float3 xformOp:scale = (19.3, 0.1, 0.006)
+                double3 xformOp:translate = (35.7, 52.7, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0057" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (7.7367535, 0.1, 0.006)
+                double3 xformOp:translate = (33, 65, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0058" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 90
+                float3 xformOp:scale = (2.3, 0.1, 0.006)
+                double3 xformOp:translate = (30.3, 68.80000000000001, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0059" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (2.079899, 0.1, 0.006)
+                double3 xformOp:translate = (29.6, 70.6, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0060" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 90
+                float3 xformOp:scale = (6.5, 0.1, 0.006)
+                double3 xformOp:translate = (28.9, 74.5, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0061" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 132.95459
+                float3 xformOp:scale = (8.024645, 0.1, 0.006)
+                double3 xformOp:translate = (26.2, 80.6, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0062" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 45
+                float3 xformOp:scale = (1.2313708, 0.1, 0.006)
+                double3 xformOp:translate = (66.5, 26.3, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0063" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 93.01279
+                float3 xformOp:scale = (7.710519, 0.1, 0.006)
+                double3 xformOp:translate = (66.7, 30.5, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0064" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 45
+                float3 xformOp:scale = (7.4539104, 0.1, 0.006)
+                double3 xformOp:translate = (69.1, 36.9, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0065" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 0
+                float3 xformOp:scale = (3.7, 0.1, 0.006)
+                double3 xformOp:translate = (73.5, 39.5, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0066" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 45
+                float3 xformOp:scale = (7.4539104, 0.1, 0.006)
+                double3 xformOp:translate = (77.9, 42.1, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0067" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 0
+                float3 xformOp:scale = (27.1, 0.1, 0.006)
+                double3 xformOp:translate = (94, 44.7, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0068" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 45
+                float3 xformOp:scale = (2.6455843, 0.1, 0.006)
+                double3 xformOp:translate = (108.4, 45.6, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0069" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 0
+                float3 xformOp:scale = (2.3, 0.1, 0.006)
+                double3 xformOp:translate = (110.4, 46.5, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0070" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -135
+                float3 xformOp:scale = (0.6656854, 0.1, 0.006)
+                double3 xformOp:translate = (45.900000000000006, 8.700000000000003, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0071" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (7.1, 0.1, 0.006)
+                double3 xformOp:translate = (42.2, 8.5, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0072" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 135
+                float3 xformOp:scale = (10.565181, 0.1, 0.006)
+                double3 xformOp:translate = (35, 12.200000000000003, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0073" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (30.9, 0.1, 0.006)
+                double3 xformOp:translate = (15.9, 15.900000000000006, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Cube "strip_0074" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Fire/Looks/RouteGreen>
+                double size = 1
+                float xformOp:rotateZ = -94.08562
+                float3 xformOp:scale = (8.521401, 0.1, 0.006)
+                double3 xformOp:translate = (65.8, 4.700000000000003, 0.004)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+        }
+    }
+}
+

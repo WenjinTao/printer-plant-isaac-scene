@@ -1,0 +1,6095 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def "World"
+{
+    def Xform "RealismShell"
+    {
+        def Xform "Bay_00_00" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (0, 10.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_00_01" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (0, 21, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_00_02" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (0, 31.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_00_03" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (0, 42, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_00_04" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (0, 52.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_00_05" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (0, 63, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_00_06" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (0, 73.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_00_07" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (0, 84, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_01_00" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (10.181818181818182, 10.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_01_01" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (10.181818181818182, 21, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_01_02" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (10.181818181818182, 31.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_01_03" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (10.181818181818182, 42, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_01_04" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (10.181818181818182, 52.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_01_05" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (10.181818181818182, 63, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_01_06" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (10.181818181818182, 73.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_01_07" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (10.181818181818182, 84, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_02_00" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (20.363636363636363, 10.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_02_01" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (20.363636363636363, 21, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_02_02" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (20.363636363636363, 31.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_02_03" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (20.363636363636363, 42, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_02_04" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (20.363636363636363, 52.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_02_05" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (20.363636363636363, 63, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_02_06" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (20.363636363636363, 73.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_02_07" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (20.363636363636363, 84, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_03_00" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (30.545454545454547, 10.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_03_01" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (30.545454545454547, 21, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_03_02" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (30.545454545454547, 31.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_03_03" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (30.545454545454547, 42, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_03_04" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (30.545454545454547, 52.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_03_05" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (30.545454545454547, 63, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_03_06" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (30.545454545454547, 73.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_03_07" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (30.545454545454547, 84, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_04_00" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (40.72727272727273, 10.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_04_01" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (40.72727272727273, 21, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_04_02" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (40.72727272727273, 31.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_04_03" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (40.72727272727273, 42, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_04_04" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (40.72727272727273, 52.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_04_05" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (40.72727272727273, 63, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_04_06" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (40.72727272727273, 73.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_04_07" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (40.72727272727273, 84, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_05_00" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (50.90909090909091, 10.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_05_01" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (50.90909090909091, 21, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_05_02" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (50.90909090909091, 31.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_05_03" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (50.90909090909091, 42, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_05_04" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (50.90909090909091, 52.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_05_05" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (50.90909090909091, 63, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_05_06" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (50.90909090909091, 73.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_05_07" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (50.90909090909091, 84, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_06_00" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (61.09090909090909, 10.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_06_01" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (61.09090909090909, 21, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_06_02" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (61.09090909090909, 31.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_06_03" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (61.09090909090909, 42, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_06_04" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (61.09090909090909, 52.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_06_05" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (61.09090909090909, 63, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_06_06" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (61.09090909090909, 73.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_06_07" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (61.09090909090909, 84, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_07_00" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (71.27272727272727, 10.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_07_01" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (71.27272727272727, 21, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_07_02" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (71.27272727272727, 31.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_07_03" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (71.27272727272727, 42, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_07_04" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (71.27272727272727, 52.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_07_05" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (71.27272727272727, 63, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_07_06" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (71.27272727272727, 73.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_07_07" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (71.27272727272727, 84, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_08_00" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (81.45454545454545, 10.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_08_01" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (81.45454545454545, 21, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_08_02" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (81.45454545454545, 31.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_08_03" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (81.45454545454545, 42, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_08_04" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (81.45454545454545, 52.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_08_05" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (81.45454545454545, 63, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_08_06" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (81.45454545454545, 73.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_08_07" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (81.45454545454545, 84, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_09_00" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (91.63636363636364, 10.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_09_01" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (91.63636363636364, 21, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_09_02" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (91.63636363636364, 31.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_09_03" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (91.63636363636364, 42, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_09_04" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (91.63636363636364, 52.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_09_05" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (91.63636363636364, 63, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_09_06" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (91.63636363636364, 73.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_09_07" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (91.63636363636364, 84, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_10_00" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (101.81818181818181, 10.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_10_01" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (101.81818181818181, 21, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_10_02" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (101.81818181818181, 31.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_10_03" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (101.81818181818181, 42, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_10_04" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (101.81818181818181, 52.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_10_05" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (101.81818181818181, 63, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_10_06" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (101.81818181818181, 73.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+
+        def Xform "Bay_10_07" (
+            prepend references = </_RealismBay>
+        )
+        {
+            float3 xformOp:scale = (0.010181818, 0.0105, 0.01)
+            double3 xformOp:translate = (101.81818181818181, 84, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+    }
+
+    def "RealismLooks"
+    {
+        def Material "ConcreteFloor"
+        {
+            token outputs:mdl:displacement.connect = </World/RealismLooks/ConcreteFloor/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </World/RealismLooks/ConcreteFloor/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </World/RealismLooks/ConcreteFloor/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                asset inputs:diffuse_texture = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Modular/Warehouse_A/.SubUSDs/textures/T_Concrete_Floor_D_Albedo.png@
+                bool inputs:enable_ORM_texture = 1
+                asset inputs:normalmap_texture = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Modular/Warehouse_A/.SubUSDs/textures/T_Concrete_Floor_D_Normal.png@
+                asset inputs:ORM_texture = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Modular/Warehouse_A/.SubUSDs/textures/T_Concrete_Floor_D_ORM.png@
+                bool inputs:project_uvw = 1
+                float inputs:reflection_roughness_constant = 0.55
+                float inputs:reflection_roughness_texture_influence = 0
+                float2 inputs:texture_scale = (0.25, 0.25)
+                bool inputs:world_or_object = 1
+                token outputs:out
+            }
+        }
+
+        def Material "EpoxyESD"
+        {
+            token outputs:mdl:displacement.connect = </World/RealismLooks/EpoxyESD/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </World/RealismLooks/EpoxyESD/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </World/RealismLooks/EpoxyESD/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                asset inputs:diffuse_texture = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Modular/Warehouse_A/.SubUSDs/textures/T_Concrete_Floor_D_Albedo.png@
+                color3f inputs:diffuse_tint = (0.55, 0.62, 0.66)
+                bool inputs:enable_ORM_texture = 1
+                asset inputs:normalmap_texture = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Modular/Warehouse_A/.SubUSDs/textures/T_Concrete_Floor_D_Normal.png@
+                asset inputs:ORM_texture = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Modular/Warehouse_A/.SubUSDs/textures/T_Concrete_Floor_D_ORM.png@
+                bool inputs:project_uvw = 1
+                float inputs:reflection_roughness_constant = 0.25
+                float inputs:reflection_roughness_texture_influence = 0
+                float2 inputs:texture_scale = (0.25, 0.25)
+                bool inputs:world_or_object = 1
+                token outputs:out
+            }
+        }
+
+        def Material "WallPanel"
+        {
+            token outputs:mdl:displacement.connect = </World/RealismLooks/WallPanel/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </World/RealismLooks/WallPanel/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </World/RealismLooks/WallPanel/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                asset inputs:diffuse_texture = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Modular/Warehouse_A/.SubUSDs/textures/T_Metal_CompositePanel_White_A_albedo.png@
+                color3f inputs:diffuse_tint = (0.8, 0.83, 0.86)
+                bool inputs:enable_ORM_texture = 1
+                asset inputs:normalmap_texture = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Modular/Warehouse_A/.SubUSDs/textures/T_Metal_CompositePanel_White_A_normal.png@
+                asset inputs:ORM_texture = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Modular/Warehouse_A/.SubUSDs/textures/T_Metal_CompositePanel_White_A_orm.png@
+                bool inputs:project_uvw = 1
+                float inputs:reflection_roughness_texture_influence = 1
+                float2 inputs:texture_scale = (0.33, 0.33)
+                bool inputs:world_or_object = 1
+                token outputs:out
+            }
+        }
+
+        def Material "WallPlinth"
+        {
+            token outputs:mdl:displacement.connect = </World/RealismLooks/WallPlinth/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </World/RealismLooks/WallPlinth/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </World/RealismLooks/WallPlinth/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                asset inputs:diffuse_texture = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Modular/Warehouse_A/.SubUSDs/textures/t_concrete_glossy_a_albedo.png@
+                color3f inputs:diffuse_tint = (0.45, 0.46, 0.47)
+                bool inputs:enable_ORM_texture = 1
+                asset inputs:normalmap_texture = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Modular/Warehouse_A/.SubUSDs/textures/t_concrete_glossy_a_normal.png@
+                asset inputs:ORM_texture = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Modular/Warehouse_A/.SubUSDs/textures/t_concrete_glossy_a_orm.png@
+                bool inputs:project_uvw = 1
+                float inputs:reflection_roughness_texture_influence = 1
+                float2 inputs:texture_scale = (0.5, 0.5)
+                bool inputs:world_or_object = 1
+                token outputs:out
+            }
+        }
+
+        def Material "BenchSteel"
+        {
+            token outputs:mdl:displacement.connect = </World/RealismLooks/BenchSteel/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </World/RealismLooks/BenchSteel/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </World/RealismLooks/BenchSteel/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0.42, 0.44, 0.46)
+                float inputs:metallic_constant = 0.6
+                float inputs:reflection_roughness_constant = 0.4
+                token outputs:out
+            }
+        }
+
+        def Material "BenchWorktop"
+        {
+            token outputs:mdl:displacement.connect = </World/RealismLooks/BenchWorktop/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </World/RealismLooks/BenchWorktop/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </World/RealismLooks/BenchWorktop/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0.16, 0.17, 0.18)
+                float inputs:metallic_constant = 0
+                float inputs:reflection_roughness_constant = 0.6
+                token outputs:out
+            }
+        }
+    }
+
+    over "Building"
+    {
+        over "slab_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (112.6, 0.3, 10.1)
+            custom double3 xformOp:translate = (56, 84.15, 5.05)
+        }
+
+        over "wall_base_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_002" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (2.3, 0.3, 10.1)
+            custom double3 xformOp:translate = (0.85, -0.15000000000000568, 5.05)
+        }
+
+        over "wall_base_002" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_003" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (1.9, 0.3, 10.1)
+            custom double3 xformOp:translate = (6.55, -0.15000000000000568, 5.05)
+        }
+
+        over "wall_base_003" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_004" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (1.9, 0.3, 10.1)
+            custom double3 xformOp:translate = (12.05, -0.15000000000000568, 5.05)
+        }
+
+        over "wall_base_004" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_005" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (1.9, 0.3, 10.1)
+            custom double3 xformOp:translate = (17.55, -0.15000000000000568, 5.05)
+        }
+
+        over "wall_base_005" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_006" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (42.7, 0.3, 10.1)
+            custom double3 xformOp:translate = (43.45, -0.15000000000000568, 5.05)
+        }
+
+        over "wall_base_006" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_007" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (13, 0.3, 10.1)
+            custom double3 xformOp:translate = (72.5, -0.15000000000000568, 5.05)
+        }
+
+        over "wall_base_007" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_008" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (2.9, 0.3, 10.1)
+            custom double3 xformOp:translate = (84.05, -0.15000000000000568, 5.05)
+        }
+
+        over "wall_base_008" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_009" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (2.9, 0.3, 10.1)
+            custom double3 xformOp:translate = (90.55, -0.15000000000000568, 5.05)
+        }
+
+        over "wall_base_009" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_010" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (2.9, 0.3, 10.1)
+            custom double3 xformOp:translate = (97.05, -0.15000000000000568, 5.05)
+        }
+
+        over "wall_base_010" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_011" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (2.9, 0.3, 10.1)
+            custom double3 xformOp:translate = (103.55, -0.15000000000000568, 5.05)
+        }
+
+        over "wall_base_011" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_012" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (3.7, 0.3, 10.1)
+            custom double3 xformOp:translate = (110.44999999999999, -0.15000000000000568, 5.05)
+        }
+
+        over "wall_base_012" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_013" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (0.3, 84, 10.1)
+            custom double3 xformOp:translate = (-0.15, 42, 5.05)
+        }
+
+        over "wall_014" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (0.3, 84, 10.1)
+            custom double3 xformOp:translate = (112.15, 42, 5.05)
+        }
+
+        over "wall_base_013" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "wall_base_014" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPlinth> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "door_head_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (3.8, 0.4, 6.6)
+            custom double3 xformOp:translate = (3.8, -0.15000000000000568, 6.8)
+        }
+
+        over "door_head_002" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (3.8, 0.4, 6.6)
+            custom double3 xformOp:translate = (9.3, -0.15000000000000568, 6.8)
+        }
+
+        over "door_head_003" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (3.8, 0.4, 6.6)
+            custom double3 xformOp:translate = (14.8, -0.15000000000000568, 6.8)
+        }
+
+        over "door_head_004" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (3.8, 0.4, 6.6)
+            custom double3 xformOp:translate = (20.3, -0.15000000000000568, 6.8)
+        }
+
+        over "door_head_005" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (3.8, 0.4, 6.6)
+            custom double3 xformOp:translate = (80.8, -0.15000000000000568, 6.8)
+        }
+
+        over "door_head_006" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (3.8, 0.4, 6.6)
+            custom double3 xformOp:translate = (87.3, -0.15000000000000568, 6.8)
+        }
+
+        over "door_head_007" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (3.8, 0.4, 6.6)
+            custom double3 xformOp:translate = (93.8, -0.15000000000000568, 6.8)
+        }
+
+        over "door_head_008" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (3.8, 0.4, 6.6)
+            custom double3 xformOp:translate = (100.3, -0.15000000000000568, 6.8)
+        }
+
+        over "door_head_009" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/WallPanel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            custom float3 xformOp:scale = (3.8, 0.4, 6.6)
+            custom double3 xformOp:translate = (106.8, -0.15000000000000568, 6.8)
+        }
+
+        over "column_001"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_002"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_003"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_004"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_005"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_006"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_007"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_008"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_009"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_010"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_011"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_012"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_013"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_014"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_015"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_016"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_017"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_018"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_019"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_020"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_021"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_022"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_023"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_024"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_025"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_026"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_027"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_028"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_029"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_030"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_031"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_032"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_033"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_034"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_035"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_036"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_037"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_038"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_039"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_040"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_041"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+
+        over "column_042"
+        {
+            custom float3 xformOp:scale = (1, 1, 1.1111112)
+        }
+    }
+
+    over "Zones"
+    {
+        over "zone_Utilities_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_Kitting_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_RawRacking_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_Receiving_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_IncomingQC_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_Subassembly_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_FinalAssembly_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_BurnIn_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_Packaging_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_FinishedGoods_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_Shipping_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_QCLab_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_Engineering_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_Canteen_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_Offices_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/ConcreteFloor> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "zone_ESD_001" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/EpoxyESD> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+    }
+
+    def "Equipment"
+    {
+        def "Subassembly"
+        {
+            over "bench_top_001" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_001_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (38.26666673024496, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_001_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (40, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_001_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (41.73333326975504, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_001" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_001" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_002" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_003" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_004" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_001" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_001" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_002" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_002_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (38.26666673024496, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_002_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (40, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_002_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (41.73333326975504, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_002" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_005" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_006" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_007" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_008" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_002" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_002" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_003" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_003_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (38.26666673024496, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_003_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (40, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_003_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (41.73333326975504, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_003" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_009" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_010" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_011" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_012" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_003" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_003" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_004" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_004_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (46.26666673024496, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_004_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (48, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_004_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (49.73333326975504, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_004" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_013" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_014" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_015" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_016" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_004" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_004" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_005" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_005_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (46.26666673024496, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_005_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (48, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_005_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (49.73333326975504, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_005" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_017" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_018" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_019" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_020" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_005" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_005" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_006" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_006_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (46.26666673024496, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_006_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (48, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_006_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (49.73333326975504, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_006" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_021" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_022" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_023" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_024" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_006" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_006" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_007" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_007_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (54.26666673024496, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_007_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (56, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_007_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (57.73333326975504, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_007" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_025" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_026" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_027" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_028" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_007" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_007" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_008" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_008_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (54.26666673024496, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_008_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (56, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_008_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (57.73333326975504, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_008" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_029" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_030" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_031" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_032" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_008" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_008" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_009" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_009_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (54.26666673024496, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_009_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (56, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_009_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (57.73333326975504, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_009" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_033" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_034" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_035" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_036" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_009" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_009" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_010" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_010_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (62.26666673024496, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_010_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (64, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_010_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (65.73333326975505, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_010" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_037" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_038" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_039" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_040" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_010" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_010" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_011" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_011_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (62.26666673024496, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_011_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (64, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_011_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (65.73333326975505, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_011" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_041" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_042" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_043" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_044" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_011" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_011" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_012" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_012_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (62.26666673024496, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_012_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (64, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_012_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (65.73333326975505, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_012" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_045" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_046" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_047" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_048" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_012" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_012" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_013" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_013_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (70.26666673024495, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_013_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (72, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_013_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (73.73333326975505, 74.55, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_013" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_049" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_050" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_051" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_052" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_013" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_013" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_014" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_014_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (70.26666673024495, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_014_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (72, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_014_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (73.73333326975505, 70.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_014" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_053" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_054" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_055" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_056" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_014" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_014" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_015" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_015_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (70.26666673024495, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_015_1" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (72, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_015_2" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.011555555, 0.009890109, 0.010344828)
+                double3 xformOp:translate = (73.73333326975505, 67.35, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_015" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_057" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_058" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_059" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_060" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_015" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_015" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def "FinalAssembly"
+        {
+            over "bench_top_016" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_016_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (39.75, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_016" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_061" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_062" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_063" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_064" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_016" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_016" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_017" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_017_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (42.25, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_017" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_065" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_066" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_067" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_068" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_017" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_017" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_018" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_018_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (44.75, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_018" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_069" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_070" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_071" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_072" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_018" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_018" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_019" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_019_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (47.25, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_019" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_073" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_074" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_075" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_076" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_019" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_019" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_020" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_020_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (49.75, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_020" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_077" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_078" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_079" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_080" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_020" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_020" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_021" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_021_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (52.25, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_021" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_081" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_082" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_083" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_084" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_021" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_021" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_022" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_022_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (54.75, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_022" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_085" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_086" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_087" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_088" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_022" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_022" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_023" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_023_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (57.25, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_023" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_089" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_090" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_091" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_092" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_023" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_023" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_024" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_024_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (59.75, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_024" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_093" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_094" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_095" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_096" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_024" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_024" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_025" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_025_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (62.25, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_025" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_097" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_098" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_099" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_100" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_025" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_025" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_026" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_026_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (64.75, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_026" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_101" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_102" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_103" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_104" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_026" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_026" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_027" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_027_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (67.25, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_027" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_105" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_106" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_107" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_108" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_027" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_027" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_028" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_028_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (69.75, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_028" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_109" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_110" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_111" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_112" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_028" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_028" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_029" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_029_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (72.25, 53.95, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_029" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_113" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_114" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_115" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_116" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_029" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_029" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_030" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_030_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (39.75, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_030" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_117" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_118" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_119" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_120" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_030" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_030" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_031" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_031_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (42.25, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_031" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_121" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_122" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_123" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_124" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_031" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_031" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_032" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_032_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (44.75, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_032" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_125" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_126" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_127" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_128" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_032" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_032" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_033" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_033_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (47.25, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_033" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_129" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_130" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_131" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_132" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_033" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_033" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_034" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_034_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (49.75, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_034" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_133" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_134" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_135" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_136" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_034" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_034" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_035" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_035_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (52.25, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_035" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_137" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_138" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_139" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_140" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_035" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_035" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_036" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_036_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (54.75, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_036" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_141" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_142" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_143" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_144" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_036" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_036" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_037" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_037_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (57.25, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_037" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_145" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_146" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_147" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_148" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_037" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_037" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_038" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_038_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (59.75, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_038" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_149" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_150" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_151" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_152" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_038" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_038" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_039" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_039_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (62.25, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_039" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_153" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_154" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_155" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_156" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_039" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_039" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_040" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_040_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (64.75, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_040" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_157" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_158" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_159" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_160" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_040" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_040" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_041" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_041_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (67.25, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_041" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_161" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_162" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_163" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_164" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_041" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_041" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_042" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_042_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (69.75, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_042" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_165" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_166" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_167" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_168" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_042" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_042" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_043" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_043_0" (
+                instanceable = true
+                prepend references = </_RealBench_station1_5>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.012, 0.008241759, 0.010344828)
+                double3 xformOp:translate = (72.25, 43.45, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_043" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_169" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_170" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_171" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_172" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_043" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_043" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def "IQC"
+        {
+            over "bench_top_052" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_052_0" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (29, 12, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_052_1" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (31, 12, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_052" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_205" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_206" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_207" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_208" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_048" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_048" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_053" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_053_0" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (29, 8.799999999999997, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_053_1" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (31, 8.799999999999997, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_053" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_209" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_210" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_211" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_212" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_049" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_049" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_054" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_054_0" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (29, 5.599999999999994, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_054_1" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (31, 5.599999999999994, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_054" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_213" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_214" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_215" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_216" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_050" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_050" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def "QCLab"
+        {
+            over "bench_top_055" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_055_0" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (39, 30.5, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_055_1" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (41, 30.5, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_055_2" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (43, 30.5, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_055" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_217" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_218" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_219" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_220" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_051" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_051" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_056" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_056_0" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (48, 30.5, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_056_1" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (50, 30.5, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_056_2" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (52, 30.5, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_056" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_221" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_222" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_223" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_224" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_052" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_052" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_057" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_057_0" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (39, 24.5, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_057_1" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (41, 24.5, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_057_2" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (43, 24.5, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_057" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_225" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_226" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_227" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_228" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_053" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_053" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_top_058" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rbench_058_0" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (48, 24.5, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_058_1" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (50, 24.5, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            def Xform "rbench_058_2" (
+                instanceable = true
+                prepend references = </_RealBench_table2_0>
+            )
+            {
+                float xformOp:rotateZ = 180
+                float3 xformOp:scale = (0.01, 0.0125, 0.010344828)
+                double3 xformOp:translate = (52, 24.5, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+            }
+
+            over "bench_shelf_058" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_229" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_230" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_231" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_leg_232" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_rail_054" (
+                active = false
+            )
+            {
+            }
+
+            over "bench_lamp_054" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def "extinguisher_001"
+        {
+            over "asset" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rasset" (
+                prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+            )
+            {
+                float3 xformOp:scale = (0.014, 0.014, 0.014)
+                double3 xformOp:translate = (0, 0, -0.48)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+            }
+        }
+
+        def "extinguisher_002"
+        {
+            over "asset" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rasset" (
+                prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+            )
+            {
+                float3 xformOp:scale = (0.014, 0.014, 0.014)
+                double3 xformOp:translate = (0, 0, -0.48)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+            }
+        }
+
+        def "extinguisher_003"
+        {
+            over "asset" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rasset" (
+                prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+            )
+            {
+                float3 xformOp:scale = (0.014, 0.014, 0.014)
+                double3 xformOp:translate = (0, 0, -0.48)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+            }
+        }
+
+        def "extinguisher_004"
+        {
+            over "asset" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rasset" (
+                prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+            )
+            {
+                float3 xformOp:scale = (0.014, 0.014, 0.014)
+                double3 xformOp:translate = (0, 0, -0.48)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+            }
+        }
+
+        def "extinguisher_005"
+        {
+            over "asset" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rasset" (
+                prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+            )
+            {
+                float3 xformOp:scale = (0.014, 0.014, 0.014)
+                double3 xformOp:translate = (0, 0, -0.48)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+            }
+        }
+
+        def "extinguisher_006"
+        {
+            over "asset" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rasset" (
+                prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+            )
+            {
+                float3 xformOp:scale = (0.014, 0.014, 0.014)
+                double3 xformOp:translate = (0, 0, -0.48)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+            }
+        }
+
+        def "extinguisher_007"
+        {
+            over "asset" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rasset" (
+                prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+            )
+            {
+                float3 xformOp:scale = (0.014, 0.014, 0.014)
+                double3 xformOp:translate = (0, 0, -0.48)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+            }
+        }
+
+        def "extinguisher_008"
+        {
+            over "asset" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rasset" (
+                prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+            )
+            {
+                float3 xformOp:scale = (0.014, 0.014, 0.014)
+                double3 xformOp:translate = (0, 0, -0.48)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+            }
+        }
+
+        def "extinguisher_009"
+        {
+            over "asset" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rasset" (
+                prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+            )
+            {
+                float3 xformOp:scale = (0.014, 0.014, 0.014)
+                double3 xformOp:translate = (0, 0, -0.48)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+            }
+        }
+
+        def "extinguisher_010"
+        {
+            over "asset" (
+                active = false
+            )
+            {
+            }
+
+            def Xform "rasset" (
+                prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Fire_Protection/ABCFireExtinguisher_A/ABCFireExtinguisher_A01_01.usd@
+            )
+            {
+                float3 xformOp:scale = (0.014, 0.014, 0.014)
+                double3 xformOp:translate = (0, 0, -0.48)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+            }
+        }
+    }
+
+    def "RealismClutter"
+    {
+        def Xform "Utilities_cone_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Cones/Colored_Traffic/ColoredTrafficCone_A01_71cm_PR_V_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 182.37143
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (12.051000190734863, 83.15099980926514, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Utilities_drum_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Storage/Drums/Steel_A/SteelDrum_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 88.53154
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (0.8500001907348633, 71.05800019073486, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Kitting_bin_cart_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Carts/BinCart_A/BinCart_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -10.147338
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (26.650000190734865, 68.85000019073486, 0.004)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Kitting_trash_yellow_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCanWithWheels_A/TrashCanWithWheels_A01_Yellow_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -82.839516
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (35.14999980926514, 77.05000019073486, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "RawRacking_hand_truck_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Hand_Trucks/Std_Alum_A/StandardAluminumHandTruck_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 89.84866
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (0.8499992370605469, 52.55199923706054, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "RawRacking_ladder_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Ladders/AlumStepDouble_A/AluminiumStepDoubleLadder_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 84.143715
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (0.8499992370605469, 21.249999237060546, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "RawRacking_ladder_03" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Ladders/AlumStepDouble_A/AluminiumStepDoubleLadder_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 182.71014
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (17.449999237060545, 67.15000076293946, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "RawRacking_hand_truck_04" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Hand_Trucks/Std_Alum_A/StandardAluminumHandTruck_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 96.34385
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (0.8499992370605469, 41.151999237060544, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "RawRacking_ladder_05" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Ladders/AlumStepDouble_A/AluminiumStepDoubleLadder_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 82.12499
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (0.8499992370605469, 66.84999923706054, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "RawRacking_ladder_06" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Ladders/AlumStepDouble_A/AluminiumStepDoubleLadder_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 79.188324
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (0.8499992370605469, 29.049999237060547, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "RawRacking_ladder_07" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Ladders/AlumStepDouble_A/AluminiumStepDoubleLadder_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 190.53706
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (24.049999237060547, 67.15000076293946, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "RawRacking_ladder_08" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Ladders/AlumStepDouble_A/AluminiumStepDoubleLadder_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 97.64128
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (0.8499992370605469, 35.04999923706055, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Receiving_drum_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Storage/Drums/Steel_A/SteelDrum_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -5.024523
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (9.650000190734863, 0.8580001907348633, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Receiving_hand_truck_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Hand_Trucks/Std_Alum_A/StandardAluminumHandTruck_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -93.75123
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (23.149999809265136, 6.752000190734863, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "IncomingQC_office_trash_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/OfficeTrashCan_A/OfficeTrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 8.266683
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (33.650000190734865, 0.8500001907348633, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "IncomingQC_trash_gray_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCan_A/TrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 6.325446
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (25.250000190734863, 0.8500001907348633, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Subassembly_bin_cart_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Carts/BinCart_A/BinCart_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 5.9647617
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (66.04999923706055, 60.85000019073486, 0.004)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Subassembly_trash_gray_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCan_A/TrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -85.27318
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (75.15000076293946, 82.25000019073487, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Subassembly_trash_gray_03" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCan_A/TrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 172.29672
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (51.64999923706055, 83.14999980926514, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Subassembly_utility_cart_04" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Carts/UtilityCart_A/UtilityCart_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -2.4272468
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (47.449999237060545, 60.85000019073486, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Subassembly_trash_blue_05" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCanWithWheels_A/TrashCanWithWheels_A01_Blue_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 96.68289
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (36.849999237060544, 82.25000019073487, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Subassembly_trash_gray_06" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCan_A/TrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -3.1959662
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (58.849999237060544, 60.85000019073486, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Subassembly_trash_gray_07" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCan_A/TrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 191.7238
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (69.64999923706054, 83.14999980926514, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "FinalAssembly_wet_floor_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Floor_Signs/WetFloor_A/WetFloorSign_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -1.3960228
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (61.849999237060544, 34.85000019073486, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "FinalAssembly_wet_floor_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Floor_Signs/WetFloor_A/WetFloorSign_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -7.9868336
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (37.24999923706055, 34.85000019073486, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "FinalAssembly_trash_gray_03" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCan_A/TrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -6.810962
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (50.449999237060545, 34.85000019073486, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "FinalAssembly_trash_gray_04" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCan_A/TrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 11.419201
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (42.64999923706055, 34.85000019073486, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "FinalAssembly_trash_gray_05" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCan_A/TrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 0.5241678
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (72.04999923706055, 34.85000019073486, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "FinalAssembly_trash_gray_06" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCan_A/TrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 0.56514645
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (55.849999237060544, 34.85000019073486, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "BurnIn_drum_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Storage/Drums/Steel_A/SteelDrum_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 171.42903
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (93.44999923706055, 83.15799980926514, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "BurnIn_trash_gray_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCan_A/TrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 97.58335
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (76.84999923706054, 75.25000019073487, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "BurnIn_utility_cart_03" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Carts/UtilityCart_A/UtilityCart_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -1.9080588
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (103.04999923706055, 56.85000019073486, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "BurnIn_utility_cart_04" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Carts/UtilityCart_A/UtilityCart_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 84.80501
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (76.84999923706054, 67.45000019073487, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "BurnIn_utility_cart_05" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Carts/UtilityCart_A/UtilityCart_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 98.41455
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (76.84999923706054, 61.45000019073486, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "BurnIn_drum_06" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Storage/Drums/Steel_A/SteelDrum_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -79.57546
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (111.15000076293946, 80.65800019073485, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "BurnIn_utility_cart_07" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Carts/UtilityCart_A/UtilityCart_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -2.98645
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (87.44999923706055, 56.85000019073486, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "BurnIn_drum_08" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Storage/Drums/Steel_A/SteelDrum_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -3.1818674
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (97.64999923706054, 56.85800019073486, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Packaging_recycling_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Recycling/RecyclingContainer_A/RecyclingContainer_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 183.79285
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (86.84999923706054, 55.14999980926514, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Packaging_trash_blue_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCanWithWheels_A/TrashCanWithWheels_A01_Blue_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 9.046059
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (94.04999923706055, 38.85000019073486, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Packaging_trash_blue_03" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCanWithWheels_A/TrashCanWithWheels_A01_Blue_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 182.97115
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (106.64999923706054, 55.14999980926514, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Packaging_trash_blue_04" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCanWithWheels_A/TrashCanWithWheels_A01_Blue_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 179.57706
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (80.24999923706055, 55.14999980926514, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Packaging_hand_truck_05" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Hand_Trucks/Std_Alum_A/StandardAluminumHandTruck_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 186.57422
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (97.04999923706055, 55.251999809265136, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "FinishedGoods_cone_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Cones/Colored_Traffic/ColoredTrafficCone_A01_71cm_PR_V_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -85.903854
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (111.15100076293946, 34.85100019073486, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "FinishedGoods_cone_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Cones/Colored_Traffic/ColoredTrafficCone_A01_71cm_PR_V_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 169.91925
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (104.25099923706055, 37.15099980926514, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "FinishedGoods_hand_truck_03" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Hand_Trucks/Std_Alum_A/StandardAluminumHandTruck_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 187.36462
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (83.84999923706054, 37.251999809265136, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "FinishedGoods_cone_04" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Cones/Colored_Traffic/ColoredTrafficCone_A01_71cm_PR_V_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 87.12248
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (76.85099923706055, 33.05100019073486, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "FinishedGoods_cone_05" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Cones/Colored_Traffic/ColoredTrafficCone_A01_71cm_PR_V_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 79.85155
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (76.85099923706055, 13.251000190734862, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "FinishedGoods_cone_06" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Safety/Cones/Colored_Traffic/ColoredTrafficCone_A01_71cm_PR_V_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 94.77876
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (76.85099923706055, 25.251000190734864, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "FinishedGoods_hand_truck_07" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Hand_Trucks/Std_Alum_A/StandardAluminumHandTruck_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 4.8214083
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (110.84999923706054, 12.952000190734864, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Shipping_trash_yellow_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCanWithWheels_A/TrashCanWithWheels_A01_Yellow_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -89.46683
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (111.15000076293946, 1.2500001907348632, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Shipping_drum_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Storage/Drums/Steel_A/SteelDrum_A01_PR_NVD_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -3.3088207
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (100.64999923706054, 0.8580001907348633, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Shipping_trash_yellow_03" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCanWithWheels_A/TrashCanWithWheels_A01_Yellow_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -11.924981
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (80.84999923706054, 0.8500001907348633, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "QCLab_office_trash_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/OfficeTrashCan_A/OfficeTrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 79.1089
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (36.85000019073486, 28.250000190734863, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "QCLab_office_trash_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/OfficeTrashCan_A/OfficeTrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 191.79681
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (41.45000019073486, 33.14999980926514, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Engineering_recycling_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Recycling/RecyclingContainer_A/RecyclingContainer_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 9.717921
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (72.85000019073486, 18.850000190734864, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Engineering_recycling_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Recycling/RecyclingContainer_A/RecyclingContainer_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -79.535645
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (75.14999980926514, 31.85000019073486, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Canteen_trash_gray_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Trash_Cans/TrashCan_A/TrashCan_A01_Gray_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 169.77869
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (37.85000019073486, 17.149999809265136, -0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Canteen_recycling_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Recycling/RecyclingContainer_A/RecyclingContainer_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 0.7876173
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (49.250000190734866, 0.8500001907348633, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Offices_recycling_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Recycling/RecyclingContainer_A/RecyclingContainer_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 172.9952
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (68.65000019073486, 17.149999809265136, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "Offices_recycling_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Facilities/Recycling/RecyclingContainer_A/RecyclingContainer_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 173.5973
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (60.85000019073486, 17.149999809265136, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "ESD_utility_cart_01" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Carts/UtilityCart_A/UtilityCart_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = 79.60506
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (53.20000009536743, 60.400000000000006, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+
+        def Xform "ESD_utility_cart_02" (
+            instanceable = true
+            prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Equipment/Carts/UtilityCart_A/UtilityCart_A01_01.usd@
+        )
+        {
+            float xformOp:rotateZ = -1.0911477
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (62.600000095367434, 61.2, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+        }
+    }
+
+    over "Lights"
+    {
+        over "Sun" (
+            active = false
+        )
+        {
+        }
+
+        over "Sky"
+        {
+            custom float inputs:intensity = 150
+        }
+    }
+}
+
+class "_RealismBay" (
+    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Modular/Warehouse_A/Warehouse_A01_H10m_Center_01.usd@
+)
+{
+    over "sm_column_a01_01" (
+        active = false
+    )
+    {
+    }
+
+    over "sm_column_a02_01" (
+        active = false
+    )
+    {
+    }
+
+    over "sm_column_a03_01" (
+        active = false
+    )
+    {
+    }
+
+    over "sm_column_a04_01" (
+        active = false
+    )
+    {
+    }
+
+    over "Column_Light" (
+        active = false
+    )
+    {
+    }
+
+    over "sm_wall_a01_01"
+    {
+        over "sm_wall_a01_floor_01" (
+            active = false
+        )
+        {
+        }
+
+        over "sm_wall_a01_foundation_01" (
+            active = false
+        )
+        {
+        }
+    }
+}
+
+class "_RealBench_station1_5" (
+    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/LabWorkbench_A/LabWorkbench_A04_01.usd@
+)
+{
+    over "Looks"
+    {
+        over "Metal_Glossy_A_LabWorkbench_A"
+        {
+            over "Shader"
+            {
+                custom uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                custom uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                custom color3f inputs:diffuse_color_constant = (0.42, 0.44, 0.46)
+                custom float inputs:metallic_constant = 0.6
+                custom float inputs:reflection_roughness_constant = 0.4
+            }
+        }
+    }
+}
+
+class "_RealBench_table2_0" (
+    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/LabWorkbench_A/LabWorkbench_A03_01.usd@
+)
+{
+    over "Looks"
+    {
+        over "Metal_Glossy_A_LabWorkbench_A"
+        {
+            over "Shader"
+            {
+                custom uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                custom uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                custom color3f inputs:diffuse_color_constant = (0.42, 0.44, 0.46)
+                custom float inputs:metallic_constant = 0.6
+                custom float inputs:reflection_roughness_constant = 0.4
+            }
+        }
+    }
+
+    over "SM_LabWorkbench_A03_01"
+    {
+        over "M_LabWorkbench_A01_Base" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/BenchSteel> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+
+        over "M_LabWorkbench_A01_TablePlate" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/RealismLooks/BenchWorktop> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+        }
+    }
+}
+

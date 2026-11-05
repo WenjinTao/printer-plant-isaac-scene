@@ -1,0 +1,994 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "World"
+{
+    def Scope "CCTV"
+    {
+        def Scope "Looks"
+        {
+            def Material "housing"
+            {
+                token outputs:surface.connect = </World/CCTV/Looks/housing/Shader.outputs:surface>
+
+                def Shader "Shader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (0.92, 0.93, 0.94)
+                    float inputs:metallic = 0
+                    float inputs:roughness = 0.35
+                    token outputs:surface
+                }
+            }
+
+            def Material "glass"
+            {
+                token outputs:surface.connect = </World/CCTV/Looks/glass/Shader.outputs:surface>
+
+                def Shader "Shader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (0.03, 0.03, 0.04)
+                    float inputs:metallic = 0.2
+                    float inputs:roughness = 0.05
+                    token outputs:surface
+                }
+            }
+
+            def Material "bracket"
+            {
+                token outputs:surface.connect = </World/CCTV/Looks/bracket/Shader.outputs:surface>
+
+                def Shader "Shader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (0.55, 0.57, 0.6)
+                    float inputs:metallic = 0.6
+                    float inputs:roughness = 0.4
+                    token outputs:surface
+                }
+            }
+        }
+
+        def Xform "CAM01" (
+            customData = {
+                string zone = "Receiving docks"
+            }
+        )
+        {
+            def Camera "Camera"
+            {
+                float2 clippingRange = (0.05, 300)
+                float focalLength = 2.8
+                float horizontalAperture = 5.37
+                float verticalAperture = 3.02
+                matrix4d xformOp:transform = ( (-0.8, 0.5999999999999999, 0, 0), (-0.2880872917416827, -0.38411638898891026, 0.8771888690852516, 0), (0.526313321451151, 0.7017510952682013, 0.48014548623613784, -0), (13.7, 11.6, 6, 0.9999999999999999) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+
+                def Cube "Body" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.09, 0.09, 0.24)
+                    double3 xformOp:translate = (0, 0, 0.13)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Hood" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.11, 0.012, 0.22)
+                    double3 xformOp:translate = (0, 0.055, 0.08)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Lens" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/glass>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.06, 0.06, 0.012)
+                    double3 xformOp:translate = (0, 0, 0.012)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Cube "Arm" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, -126.869896)
+                float3 xformOp:scale = (0.3, 0.04, 0.04)
+                double3 xformOp:translate = (13.79, 11.719999999999999, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Cube "Plate" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, -126.869896)
+                float3 xformOp:scale = (0.02, 0.14, 0.2)
+                double3 xformOp:translate = (13.879999999999999, 11.84, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        def Xform "CAM02" (
+            customData = {
+                string zone = "Raw material aisle"
+            }
+        )
+        {
+            def Camera "Camera"
+            {
+                float2 clippingRange = (0.05, 300)
+                float focalLength = 6
+                float horizontalAperture = 5.37
+                float verticalAperture = 3.02
+                matrix4d xformOp:transform = ( (0.9995677544643533, 0.02939905160189274, 0, 0), (-0.005024372380910852, 0.170828660950969, 0.9852879397820096, -0), (0.02896653098437388, -0.9848620534687119, 0.1709025328078059, 0), (11.9, 18.000000000000004, 5.900000000000002, 1.0000000000000002) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+
+                def Cube "Body" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.09, 0.09, 0.24)
+                    double3 xformOp:translate = (0, 0, 0.13)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Hood" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.11, 0.012, 0.22)
+                    double3 xformOp:translate = (0, 0.055, 0.08)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Lens" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/glass>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.06, 0.06, 0.012)
+                    double3 xformOp:translate = (0, 0, 0.012)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Cube "Arm" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, 0)
+                float3 xformOp:scale = (0.8, 0.04, 0.04)
+                double3 xformOp:translate = (12.3, 18, 6.0200000000000005)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Cube "Plate" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, 0)
+                float3 xformOp:scale = (0.02, 0.14, 0.2)
+                double3 xformOp:translate = (12.7, 18, 6.0200000000000005)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        def Xform "CAM03" (
+            customData = {
+                string zone = "Kitting"
+            }
+        )
+        {
+            def Camera "Camera"
+            {
+                float2 clippingRange = (0.05, 300)
+                float focalLength = 2.8
+                float horizontalAperture = 5.37
+                float verticalAperture = 3.02
+                matrix4d xformOp:transform = ( (0.08304547985373949, -0.9965457582448798, 0, 0), (0.3961434436984831, 0.033011953641540054, 0.9175949994041358, 0), (-0.9144254044429044, -0.07620211703690824, 0.39751656200531377, 0), (14.498272879122444, 72.04152273992689, 5.499999999999999, 1.0000000000000002) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+
+                def Cube "Body" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.09, 0.09, 0.24)
+                    double3 xformOp:translate = (0, 0, 0.13)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Hood" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.11, 0.012, 0.22)
+                    double3 xformOp:translate = (0, 0.055, 0.08)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Lens" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/glass>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.06, 0.06, 0.012)
+                    double3 xformOp:translate = (0, 0, 0.012)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Cube "Arm" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, 4.763642)
+                float3 xformOp:scale = (0.3, 0.04, 0.04)
+                double3 xformOp:translate = (14.348791015385709, 72.02906591794881, 5.62)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Cube "Plate" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, 4.763642)
+                float3 xformOp:scale = (0.02, 0.14, 0.2)
+                double3 xformOp:translate = (14.199309151648977, 72.01660909597075, 5.62)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        def Xform "CAM04" (
+            customData = {
+                string zone = "Subassembly A-C"
+            }
+        )
+        {
+            def Camera "Camera"
+            {
+                float2 clippingRange = (0.05, 300)
+                float focalLength = 2.8
+                float horizontalAperture = 5.37
+                float verticalAperture = 3.02
+                matrix4d xformOp:transform = ( (0.8320502943378435, -0.5547001962252291, 0, 0), (0.2038081740020018, 0.30571226100300264, 0.9300549670220579, 0), (-0.5159016727073846, -0.7738525090610768, 0.3674204108614521, 0), (42.27735009811261, 60.416025147168924, 5.999999999999999, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+
+                def Cube "Body" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.09, 0.09, 0.24)
+                    double3 xformOp:translate = (0, 0, 0.13)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Hood" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.11, 0.012, 0.22)
+                    double3 xformOp:translate = (0, 0.055, 0.08)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Lens" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/glass>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.06, 0.06, 0.012)
+                    double3 xformOp:translate = (0, 0, 0.012)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Cube "Arm" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, 56.309933)
+                float3 xformOp:scale = (0.3, 0.04, 0.04)
+                double3 xformOp:translate = (42.19414506867883, 60.29121760301825, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Cube "Plate" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, 56.309933)
+                float3 xformOp:scale = (0.02, 0.14, 0.2)
+                double3 xformOp:translate = (42.110940039245044, 60.16641005886757, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        def Xform "CAM05" (
+            customData = {
+                string zone = "Subassembly C-E (ESD)"
+            }
+        )
+        {
+            def Camera "Camera"
+            {
+                float2 clippingRange = (0.05, 300)
+                float focalLength = 2.8
+                float horizontalAperture = 5.37
+                float verticalAperture = 3.02
+                matrix4d xformOp:transform = ( (0.8320502943378437, 0.5547001962252289, 0, 0), (-0.2038081740020017, 0.30571226100300275, 0.930054967022058, -0), (0.5159016727073844, -0.7738525090610769, 0.3674204108614521, 0), (69.72264990188738, 60.41602514716891, 5.999999999999998, 0.9999999999999998) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+
+                def Cube "Body" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.09, 0.09, 0.24)
+                    double3 xformOp:translate = (0, 0, 0.13)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Hood" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.11, 0.012, 0.22)
+                    double3 xformOp:translate = (0, 0.055, 0.08)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Lens" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/glass>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.06, 0.06, 0.012)
+                    double3 xformOp:translate = (0, 0, 0.012)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Cube "Arm" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, 123.69007)
+                float3 xformOp:scale = (0.3, 0.04, 0.04)
+                double3 xformOp:translate = (69.80585493132116, 60.29121760301825, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Cube "Plate" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, 123.69007)
+                float3 xformOp:scale = (0.02, 0.14, 0.2)
+                double3 xformOp:translate = (69.88905996075495, 60.16641005886757, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        def Xform "CAM06" (
+            customData = {
+                string zone = "Final assembly, west"
+            }
+        )
+        {
+            def Camera "Camera"
+            {
+                float2 clippingRange = (0.05, 300)
+                float focalLength = 2.8
+                float horizontalAperture = 5.37
+                float verticalAperture = 3.02
+                matrix4d xformOp:transform = ( (-0.024992191160202924, -0.9996876464081228, 8.673617379884035e-19, 0), (0.2712948392763412, -0.006782370981908489, 0.9624723942149656, -0), (-0.9621717625055498, 0.024054294062638603, 0.2713796056709347, 0), (42.49984382320406, 47.987503904419896, 6.0000000000000036, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+
+                def Cube "Body" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.09, 0.09, 0.24)
+                    double3 xformOp:translate = (0, 0, 0.13)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Hood" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.11, 0.012, 0.22)
+                    double3 xformOp:translate = (0, 0.055, 0.08)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Lens" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/glass>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.06, 0.06, 0.012)
+                    double3 xformOp:translate = (0, 0, 0.012)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Cube "Arm" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, -1.4320962)
+                float3 xformOp:scale = (0.3, 0.04, 0.04)
+                double3 xformOp:translate = (42.349890676242836, 47.99125273309393, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Cube "Plate" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, -1.4320962)
+                float3 xformOp:scale = (0.02, 0.14, 0.2)
+                double3 xformOp:translate = (42.19993752928162, 47.99500156176796, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        def Xform "CAM07" (
+            customData = {
+                string zone = "Final assembly, east"
+            }
+        )
+        {
+            def Camera "Camera"
+            {
+                float2 clippingRange = (0.05, 300)
+                float focalLength = 2.8
+                float horizontalAperture = 5.37
+                float verticalAperture = 3.02
+                matrix4d xformOp:transform = ( (-0.024992191160202924, 0.9996876464081228, -8.673617379884035e-19, 0), (-0.2712948392763412, -0.006782370981908489, 0.9624723942149656, 0), (0.9621717625055498, 0.024054294062638603, 0.2713796056709347, -0), (69.50015617679595, 47.98750390441989, 6.000000000000005, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+
+                def Cube "Body" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.09, 0.09, 0.24)
+                    double3 xformOp:translate = (0, 0, 0.13)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Hood" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.11, 0.012, 0.22)
+                    double3 xformOp:translate = (0, 0.055, 0.08)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Lens" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/glass>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.06, 0.06, 0.012)
+                    double3 xformOp:translate = (0, 0, 0.012)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Cube "Arm" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, -178.5679)
+                float3 xformOp:scale = (0.3, 0.04, 0.04)
+                double3 xformOp:translate = (69.65010932375716, 47.99125273309393, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Cube "Plate" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, -178.5679)
+                float3 xformOp:scale = (0.02, 0.14, 0.2)
+                double3 xformOp:translate = (69.80006247071837, 47.99500156176796, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        def Xform "CAM08" (
+            customData = {
+                string zone = "Burn-in test"
+            }
+        )
+        {
+            def Camera "Camera"
+            {
+                float2 clippingRange = (0.05, 300)
+                float focalLength = 2.8
+                float horizontalAperture = 5.37
+                float verticalAperture = 3.02
+                matrix4d xformOp:transform = ( (0.7371541402007414, -0.6757246285173464, 0, 0), (0.22241202235974086, 0.24263129711971726, 0.9442790614896919, 0), (-0.6380726180418306, -0.6960792196819968, 0.3291459464009034, 0), (84.33786231425866, 60.36857707010036, 6.000000000000009, 0.9999999999999998) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+
+                def Cube "Body" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.09, 0.09, 0.24)
+                    double3 xformOp:translate = (0, 0, 0.13)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Hood" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.11, 0.012, 0.22)
+                    double3 xformOp:translate = (0, 0.055, 0.08)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Lens" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/glass>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.06, 0.06, 0.012)
+                    double3 xformOp:translate = (0, 0, 0.012)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Cube "Arm" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, 47.48955)
+                float3 xformOp:scale = (0.3, 0.04, 0.04)
+                double3 xformOp:translate = (84.23650361998108, 60.25800394907026, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Cube "Plate" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, 47.48955)
+                float3 xformOp:scale = (0.02, 0.14, 0.2)
+                double3 xformOp:translate = (84.13514492570347, 60.14743082804015, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        def Xform "CAM09" (
+            customData = {
+                string zone = "Packaging"
+            }
+        )
+        {
+            def Camera "Camera"
+            {
+                float2 clippingRange = (0.05, 300)
+                float focalLength = 2.8
+                float horizontalAperture = 5.37
+                float verticalAperture = 3.02
+                matrix4d xformOp:transform = ( (-0.3162277660168381, -0.9486832980505138, 0, 0), (0.39125141712530564, -0.13041713904176863, 0.9109959925496929, -0), (-0.8642466827228439, 0.2880822275742815, 0.4124152052948581, 0), (84.47434164902526, 47.841886116991574, 5.999999999999993, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+
+                def Cube "Body" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.09, 0.09, 0.24)
+                    double3 xformOp:translate = (0, 0, 0.13)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Hood" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.11, 0.012, 0.22)
+                    double3 xformOp:translate = (0, 0.055, 0.08)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Lens" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/glass>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.06, 0.06, 0.012)
+                    double3 xformOp:translate = (0, 0, 0.012)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Cube "Arm" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, -18.434948)
+                float3 xformOp:scale = (0.3, 0.04, 0.04)
+                double3 xformOp:translate = (84.33203915431768, 47.88932028189411, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Cube "Plate" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, -18.434948)
+                float3 xformOp:scale = (0.02, 0.14, 0.2)
+                double3 xformOp:translate = (84.1897366596101, 47.936754446796634, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        def Xform "CAM10" (
+            customData = {
+                string zone = "Finished goods aisle"
+            }
+        )
+        {
+            def Camera "Camera"
+            {
+                float2 clippingRange = (0.05, 300)
+                float focalLength = 6
+                float horizontalAperture = 5.37
+                float verticalAperture = 3.02
+                matrix4d xformOp:transform = ( (0, 1, 0, 0), (-0.12733337526830843, 0, 0.9918599757741918, -0), (0.9918599757741918, -0, 0.12733337526830843, 0), (111.60000000000001, 29.65, 3.8000000000000016, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+
+                def Cube "Body" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.09, 0.09, 0.24)
+                    double3 xformOp:translate = (0, 0, 0.13)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Hood" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.11, 0.012, 0.22)
+                    double3 xformOp:translate = (0, 0.055, 0.08)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Lens" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/glass>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.06, 0.06, 0.012)
+                    double3 xformOp:translate = (0, 0, 0.012)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Cube "Arm" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, 180)
+                float3 xformOp:scale = (0.25, 0.04, 0.04)
+                double3 xformOp:translate = (111.725, 29.65, 3.92)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Cube "Plate" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, 180)
+                float3 xformOp:scale = (0.02, 0.14, 0.2)
+                double3 xformOp:translate = (111.85, 29.65, 3.92)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        def Xform "CAM11" (
+            customData = {
+                string zone = "Shipping docks"
+            }
+        )
+        {
+            def Camera "Camera"
+            {
+                float2 clippingRange = (0.05, 300)
+                float focalLength = 2.8
+                float horizontalAperture = 5.37
+                float verticalAperture = 3.02
+                matrix4d xformOp:transform = ( (-0.8479983040050877, 0.5299989400031805, 0, 0), (-0.2778504224486088, -0.44456067591777354, 0.8515661736897857, 0), (0.4513291693981507, 0.7221266710370401, 0.524247128582826, -0), (97.73500052999844, 11.576000847997454, 6.000000000000002, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+
+                def Cube "Body" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.09, 0.09, 0.24)
+                    double3 xformOp:translate = (0, 0, 0.13)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Hood" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.11, 0.012, 0.22)
+                    double3 xformOp:translate = (0, 0.055, 0.08)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Lens" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/glass>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.06, 0.06, 0.012)
+                    double3 xformOp:translate = (0, 0, 0.012)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Cube "Arm" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, -122.00539)
+                float3 xformOp:scale = (0.3, 0.04, 0.04)
+                double3 xformOp:translate = (97.8145003709989, 11.703200593598218, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Cube "Plate" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, -122.00539)
+                float3 xformOp:scale = (0.02, 0.14, 0.2)
+                double3 xformOp:translate = (97.89400021199937, 11.830400339198983, 6.12)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        def Xform "CAM12" (
+            customData = {
+                string zone = "Showroom"
+            }
+        )
+        {
+            def Camera "Camera"
+            {
+                float2 clippingRange = (0.05, 300)
+                float focalLength = 2.8
+                float horizontalAperture = 5.37
+                float verticalAperture = 3.02
+                matrix4d xformOp:transform = ( (-0.42808634473904505, -0.9037378388935384, 0, 0), (0.16891558383128602, -0.08001264497271453, 0.9823774743872162, -0), (-0.8878116956803954, 0.4205423821643984, 0.18690772540639908, 0), (56.60000000000001, 9.400000000000006, 3.1999999999999997, 1.0000000000000002) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+
+                def Cube "Body" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.09, 0.09, 0.24)
+                    double3 xformOp:translate = (0, 0, 0.13)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Hood" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/housing>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.11, 0.012, 0.22)
+                    double3 xformOp:translate = (0, 0.055, 0.08)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+
+                def Cube "Lens" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/CCTV/Looks/glass>
+                    double size = 1
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (0.06, 0.06, 0.012)
+                    double3 xformOp:translate = (0, 0, 0.012)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Cube "Arm" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, -25.346176)
+                float3 xformOp:scale = (0.25, 0.04, 0.04)
+                double3 xformOp:translate = (56.48703277013831, 9.453510793092386, 3.3200000000000003)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Cube "Plate" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, -25.346176)
+                float3 xformOp:scale = (0.02, 0.14, 0.2)
+                double3 xformOp:translate = (56.37406554027662, 9.507021586184766, 3.3200000000000003)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def Cube "Pole" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/CCTV/Looks/bracket>
+                double size = 1
+                float3 xformOp:rotateXYZ = (0, 0, -25.346176)
+                float3 xformOp:scale = (0.1, 0.1, 3.42)
+                double3 xformOp:translate = (56.319841269943005, 9.53270676686911, 1.7100000000000002)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+    }
+}
+

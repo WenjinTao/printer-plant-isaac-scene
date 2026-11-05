@@ -1,0 +1,9 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    subLayers = [
+        @smt_line/smt.usda@,
+        @printer_plant_real.usda@
+    ]
+)
+

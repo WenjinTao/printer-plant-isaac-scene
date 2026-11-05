@@ -1,0 +1,278 @@
+#usda 1.0
+(
+    defaultPrim = "Printer"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "Printer"
+{
+    def Scope "Looks"
+    {
+        def Material "body"
+        {
+            token outputs:surface.connect = </Printer/Looks/body/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.16470589, 0.1764706, 0.1882353)
+                float inputs:metallic = 0.2
+                float inputs:roughness = 0.45
+                token outputs:surface
+            }
+        }
+
+        def Material "smoke"
+        {
+            token outputs:surface.connect = </Printer/Looks/smoke/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.22745098, 0.25882354, 0.28235295)
+                float inputs:metallic = 0
+                float inputs:opacity = 0.35
+                float inputs:roughness = 0.05
+                token outputs:surface
+            }
+        }
+
+        def Material "bed"
+        {
+            token outputs:surface.connect = </Printer/Looks/bed/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.7882353, 0.8, 0.80784315)
+                float inputs:metallic = 0.9
+                float inputs:roughness = 0.3
+                token outputs:surface
+            }
+        }
+
+        def Material "rail"
+        {
+            token outputs:surface.connect = </Printer/Looks/rail/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.5529412, 0.5764706, 0.5921569)
+                float inputs:metallic = 0.9
+                float inputs:roughness = 0.25
+                token outputs:surface
+            }
+        }
+
+        def Material "head"
+        {
+            token outputs:surface.connect = </Printer/Looks/head/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.9098039, 0.4117647, 0.17254902)
+                float inputs:metallic = 0
+                float inputs:roughness = 0.4
+                token outputs:surface
+            }
+        }
+
+        def Material "screen"
+        {
+            token outputs:surface.connect = </Printer/Looks/screen/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.10980392, 0.23137255, 0.33333334)
+                color3f inputs:emissiveColor = (0.3, 0.9, 1.6)
+                float inputs:metallic = 0
+                float inputs:roughness = 0.2
+                token outputs:surface
+            }
+        }
+
+        def Material "part"
+        {
+            token outputs:surface.connect = </Printer/Looks/part/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.30980393, 0.68235296, 0.38431373)
+                float inputs:metallic = 0
+                float inputs:roughness = 0.5
+                token outputs:surface
+            }
+        }
+    }
+
+    def Cube "p01" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/body>
+        double size = 1
+        float3 xformOp:scale = (0.39, 0.4, 0.07)
+        double3 xformOp:translate = (0, 0, 0.035)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p02" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/body>
+        double size = 1
+        float3 xformOp:scale = (0.39, 0.4, 0.03)
+        double3 xformOp:translate = (0, 0, 0.445)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p03" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/body>
+        double size = 1
+        float3 xformOp:scale = (0.03, 0.03, 0.36)
+        double3 xformOp:translate = (-0.18, -0.185, 0.25)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p04" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/body>
+        double size = 1
+        float3 xformOp:scale = (0.03, 0.03, 0.36)
+        double3 xformOp:translate = (-0.18, 0.185, 0.25)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p05" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/body>
+        double size = 1
+        float3 xformOp:scale = (0.03, 0.03, 0.36)
+        double3 xformOp:translate = (0.18, -0.185, 0.25)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p06" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/body>
+        double size = 1
+        float3 xformOp:scale = (0.03, 0.03, 0.36)
+        double3 xformOp:translate = (0.18, 0.185, 0.25)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p07" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/body>
+        double size = 1
+        float3 xformOp:scale = (0.39, 0.012, 0.36)
+        double3 xformOp:translate = (0, 0.194, 0.25)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p08" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/smoke>
+        double size = 1
+        float3 xformOp:scale = (0.006, 0.4, 0.36)
+        double3 xformOp:translate = (-0.192, 0, 0.25)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p09" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/smoke>
+        double size = 1
+        float3 xformOp:scale = (0.006, 0.4, 0.36)
+        double3 xformOp:translate = (0.192, 0, 0.25)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p10" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/smoke>
+        double size = 1
+        float3 xformOp:scale = (0.33, 0.006, 0.36)
+        double3 xformOp:translate = (0, -0.197, 0.25)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p11" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/bed>
+        double size = 1
+        float3 xformOp:scale = (0.26, 0.26, 0.01)
+        double3 xformOp:translate = (0, 0, 0.155)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p12" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/rail>
+        double size = 1
+        float3 xformOp:scale = (0.33, 0.024, 0.015)
+        double3 xformOp:translate = (0, 0, 0.3875)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p13" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/head>
+        double size = 1
+        float3 xformOp:scale = (0.06, 0.07, 0.08)
+        double3 xformOp:translate = (0.005000000000000001, 0, 0.36)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p14" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/part>
+        double size = 1
+        float3 xformOp:scale = (0.04, 0.04, 0.04)
+        double3 xformOp:translate = (0, 0, 0.18)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Cube "p15" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Printer/Looks/screen>
+        double size = 1
+        float3 xformOp:scale = (0.1, 0.004, 0.04)
+        double3 xformOp:translate = (-0.12000000000000001, -0.202, 0.035)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+}
+
